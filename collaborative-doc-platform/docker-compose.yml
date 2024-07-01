@@ -1,0 +1,22 @@
+version: '3'
+services:
+  user-service:
+    build: ./user-service
+    ports:
+      - "9000:9000"
+    environment:
+      - JWT_SECRET=lB1H3P3vuuRDVv1+4UQOxKp08jk4U0dP9S/JxaFq94U=
+      - DB_HOST=localhost
+      - DB_USER=postgres
+      - DB_PASSWORD=Nikhil@007
+      - DB_NAME=collaborative_docs
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Nikhil@007
+      POSTGRES_DB: collaborative_docs
+    ports:
+      - "5432:5432"

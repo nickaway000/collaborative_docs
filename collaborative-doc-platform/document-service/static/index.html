@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 1em;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 1em;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+        li:hover {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Documents</h1>
+        <button onclick="createNewDocument()">Create New Document</button>
+        <ul id="document-list"></ul>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
